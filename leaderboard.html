@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PTIT Trading Cup — Bảng Xếp Hạng</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Be+Vietnam+Pro&family=Barlow+Condensed:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #090909;
+  --bg2: #101010;
+  --bg3: #161616;
+  --card: #111111;
+  --border: rgba(255,255,255,0.06);
+  --red: #ef3e36;
+  --red2: #ef3e36;
+  --red-dim: rgba(239,62,54,0.08);
+  --text: #f0f0f0;
+  --muted: #4a4a4a;
+  --muted2: #2a2a2a;
+  --green: #00e676;
+  --gold: #ffd54f;
+  --silver: #b0bec5;
+  --bronze: #a1887f;
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Be Vietnam Pro', sans-serif;
+  --display: 'Bebas Neue', cursive;
+  --display-vi: 'Barlow Condensed', sans-serif;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Grid background */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image:
+    linear-gradient(rgba(239,62,54,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(239,62,54,0.02) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none; z-index: 0;
+}
+
+/* Red glow top */
+body::after {
+  content: '';
+  position: fixed;
+  top: -300px; left: 50%; transform: translateX(-50%);
+  width: 800px; height: 600px;
+  background: radial-gradient(ellipse, rgba(239,62,54,0.07) 0%, transparent 70%);
+  pointer-events: none; z-index: 0;
+}
+
+.wrap { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+/* ─── HEADER ─── */
+header {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+  background: rgba(9,9,9,0.95);
+  backdrop-filter: blur(20px);
+  position: sticky; top: 0; z-index: 100;
+}
+
+.header-inner { display: flex; align-items: center; justify-content: space-between; }
+
+.logo { display: flex; align-items: center; gap: 14px; }
+
+.logo-badge {
+  background: var(--red);
+  color: #fff;
+  font-family: var(--display);
+  font-size: 13px;
+  letter-spacing: 2px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(239,62,54,0.4);
+}
+
+.logo-title {
+  font-family: var(--display);
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: var(--text);
+}
+
+.logo-title span { color: var(--red); }
+
+.header-right { display: flex; align-items: center; gap: 16px; }
+
+.live-tag {
+  display: flex; align-items: center; gap: 7px;
+  font-family: var(--mono); font-size: 10px;
+  color: var(--green); letter-spacing: 2px;
+  border: 1px solid rgba(0,230,118,0.25);
+  background: rgba(0,230,118,0.06);
+  padding: 5px 12px; border-radius: 20px;
+}
+
+.live-dot {
+  width: 5px; height: 5px;
+  background: var(--green); border-radius: 50%;
+  box-shadow: 0 0 6px var(--green);
+  animation: blink 2s ease infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+.update-tag {
+  font-family: var(--mono); font-size: 11px;
+  color: var(--muted);
+}
+
+/* ─── HERO ─── */
+.hero {
+  padding: 52px 0 40px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 40px;
+}
+
+.hero-label {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--red); margin-bottom: 16px;
+}
+
+.hero-label::before {
+  content: '';
+  display: block; width: 24px; height: 1.5px;
+  background: var(--red);
+}
+
+.hero-title {
+  font-family: var(--display-vi);
+  font-size: clamp(44px, 7vw, 88px);
+  letter-spacing: 4px;
+  line-height: 0.9;
+  color: var(--text);
+}
+
+.hero-title .accent { color: var(--red); }
+
+.hero-meta {
+  display: flex; align-items: center; gap: 24px;
+  margin-top: 20px; flex-wrap: wrap;
+}
+
+.meta-chip {
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--mono); font-size: 12px;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  padding: 7px 14px; border-radius: 6px;
+}
+
+.meta-chip strong { color: var(--text); font-weight: 600; }
+
+/* ─── STATS ─── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 36px;
+}
+
+.stat-tile {
+  background: var(--card);
+  padding: 24px 28px;
+  position: relative;
+  transition: background 0.15s;
+}
+
+.stat-tile::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 2px;
+  background: var(--red);
+  opacity: 0; transition: opacity 0.2s;
+}
+
+.stat-tile:hover { background: #141414; }
+.stat-tile:hover::after { opacity: 1; }
+
+.tile-label {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 10px;
+}
+
+.tile-val {
+  font-family: var(--display);
+  font-size: 44px; letter-spacing: 1px;
+  color: var(--text); line-height: 1;
+}
+
+.tile-val.red { color: var(--red); }
+
+.tile-sub {
+  font-family: var(--mono); font-size: 11px;
+  color: var(--muted); margin-top: 6px;
+}
+
+/* ─── LEADERBOARD ─── */
+.lb-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.lb-title {
+  font-family: var(--display-vi);
+  font-size: 28px; letter-spacing: 1.5px;
+}
+
+.lb-title span { color: var(--red); }
+
+.lb-badge {
+  font-family: var(--mono); font-size: 11px;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  background: var(--bg3);
+  padding: 4px 12px; border-radius: 20px;
+}
+
+.lb-table {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.lb-thead {
+  display: grid;
+  grid-template-columns: 80px 1fr 200px 48px;
+  padding: 12px 24px;
+  background: var(--bg3);
+  border-bottom: 1px solid var(--border);
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--muted);
+}
+
+.lb-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 200px 48px;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+  background: var(--card);
+  transition: background 0.12s, border-left 0.12s;
+  border-left: 3px solid transparent;
+  animation: rowIn 0.4s ease both;
+}
+
+.lb-row:last-child { border-bottom: none; }
+.lb-row:hover { background: var(--bg3); border-left-color: rgba(239,62,54,0.4); }
+
+/* Top 3 special styling */
+.lb-row.top1 { background: rgba(255,213,79,0.04); border-left-color: var(--gold); }
+.lb-row.top2 { background: rgba(176,190,197,0.03); border-left-color: var(--silver); }
+.lb-row.top3 { background: rgba(161,136,127,0.03); border-left-color: var(--bronze); }
+
+@keyframes rowIn {
+  from { opacity: 0; transform: translateX(-8px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.rank-num {
+  font-family: var(--display);
+  font-size: 32px; letter-spacing: 1px; line-height: 1;
+}
+
+.r1 { color: var(--gold); }
+.r2 { color: var(--silver); }
+.r3 { color: var(--bronze); }
+.rn { color: var(--muted2); }
+
+.trader-name {
+  font-size: 16px; font-weight: 700;
+  color: var(--text); letter-spacing: 0.3px;
+}
+
+.trader-coins {
+  font-family: var(--mono); font-size: 11px;
+  color: var(--muted); margin-top: 4px;
+}
+
+.equity-val {
+  font-family: var(--display);
+  font-size: 22px; letter-spacing: 1px;
+  color: var(--green); line-height: 1;
+}
+
+.equity-unit {
+  font-family: var(--mono); font-size: 10px;
+  color: var(--muted); margin-top: 3px;
+}
+
+.change-badge {
+  display: flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px;
+  border-radius: 6px;
+  font-family: var(--mono); font-size: 10px; font-weight: 700;
+}
+
+.change-up { background: rgba(0,230,118,0.1); color: var(--green); }
+.change-down { background: rgba(239,62,54,0.1); color: var(--red); }
+.change-same { background: var(--bg3); color: var(--muted); }
+
+/* ─── LOADING / EMPTY ─── */
+.loading-state {
+  padding: 80px 24px;
+  text-align: center;
+  background: var(--card);
+}
+
+.loading-spinner {
+  width: 40px; height: 40px;
+  border: 2px solid var(--border);
+  border-top-color: var(--red);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.loading-text {
+  font-family: var(--mono); font-size: 13px;
+  color: var(--muted); letter-spacing: 1px;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  margin-top: 60px;
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.footer-text {
+  font-family: var(--mono); font-size: 11px;
+  color: var(--muted); line-height: 2;
+}
+
+.footer-text a { color: var(--red); text-decoration: none; }
+
+/* ─── SCROLLBAR ─── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--muted2); border-radius: 2px; }
+
+/* ─── COUNTDOWN ─── */
+.countdown-bar {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 20px;
+  margin-bottom: 28px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+}
+
+.countdown-label {
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--muted);
+}
+
+.countdown-timer {
+  font-family: var(--display);
+  font-size: 24px; letter-spacing: 2px;
+  color: var(--text);
+}
+
+.countdown-sub {
+  font-family: var(--mono); font-size: 10px;
+  color: var(--muted);
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-badge">PTIT</div>
+        <div class="logo-title">Trading <span>Cup</span></div>
+      </div>
+      <div class="header-right">
+        <div class="live-tag"><div class="live-dot"></div>LIVE</div>
+        <div class="update-tag" id="update-time">Đang tải...</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <div class="hero-label">Cuộc thi trading sinh viên</div>
+      <div class="hero-title">
+        Bảng<br><span class="accent">Xếp Hạng</span>
+      </div>
+      <div class="hero-meta">
+        <div class="meta-chip">👥 Tổng tham gia: <strong id="total-count">--</strong></div>
+        <div class="meta-chip">🏆 Top 1: <strong id="top1-name">--</strong></div>
+        <div class="meta-chip">💰 Equity cao nhất: <strong id="top1-equity">--</strong> USDT</div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-tile">
+        <div class="tile-label">Tổng tham gia</div>
+        <div class="tile-val" id="stat-total">--</div>
+        <div class="tile-sub">sinh viên PTIT</div>
+      </div>
+      <div class="stat-tile">
+        <div class="tile-label">Equity cao nhất</div>
+        <div class="tile-val red" id="stat-max">--</div>
+        <div class="tile-sub">USDT</div>
+      </div>
+      <div class="stat-tile">
+        <div class="tile-label">Cập nhật lúc</div>
+        <div class="tile-val" style="font-size:32px" id="stat-time">--:--</div>
+        <div class="tile-sub" id="stat-date">--/--/----</div>
+      </div>
+    </div>
+
+    <!-- Countdown đến lần cập nhật tiếp theo -->
+    <div class="countdown-bar">
+      <div>
+        <div class="countdown-label">Cập nhật tiếp theo lúc 0:00</div>
+        <div class="countdown-sub">Dữ liệu được làm mới hàng ngày lúc nửa đêm</div>
+      </div>
+      <div class="countdown-timer" id="countdown">--:--:--</div>
+    </div>
+
+    <!-- Leaderboard -->
+    <div class="lb-header">
+      <div class="lb-title">Bảng Xếp <span>Hạng</span></div>
+      <div class="lb-badge" id="lb-date">--/--/----</div>
+    </div>
+
+    <div class="lb-table">
+      <div class="lb-thead">
+        <div>Hạng</div>
+        <div>Trader</div>
+        <div>Equity (USDT)</div>
+        <div></div>
+      </div>
+      <div id="lb-body">
+        <div class="loading-state">
+          <div class="loading-spinner"></div>
+          <div class="loading-text">Đang tải dữ liệu...</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-text">
+      PTIT Trading Cup — Dữ liệu cập nhật hàng ngày lúc 0:00<br>
+      Equity = Tổng tất cả coin quy về USDT theo giá Binance<br>
+      Chỉ tính tài khoản <strong>@stu.ptit.edu.vn</strong>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ============================================================
+// CẤU HÌNH - THAY ĐỔI URL NÀY SAU KHI UPLOAD LÊN GITHUB
+// ============================================================
+const JSON_URL = './leaderboard.json';
+// Khi dùng GitHub Pages: 'https://username.github.io/repo/leaderboard.json'
+// ============================================================
+
+let data = null;
+
+async function loadData() {
+  try {
+    const r = await fetch(JSON_URL + '?t=' + Date.now()); // cache bust
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    data = await r.json();
+    render();
+  } catch(e) {
+    document.getElementById('lb-body').innerHTML = `
+      <div class="loading-state">
+        <div style="font-size:32px;margin-bottom:12px">⚠️</div>
+        <div class="loading-text">Không tải được dữ liệu<br>${e.message}</div>
+      </div>`;
+    document.getElementById('update-time').textContent = 'Lỗi tải dữ liệu';
+  }
+}
+
+function render() {
+  if (!data) return;
+
+  const lb = data.leaderboard || [];
+  const updatedAt = data.updated_at || '--';
+  const updatedDate = data.updated_date || '--';
+
+  // Header info
+  document.getElementById('update-time').textContent = 'Cập nhật: ' + updatedAt;
+  document.getElementById('total-count').textContent = lb.length;
+  document.getElementById('lb-date').textContent = updatedDate;
+
+  // Stats
+  document.getElementById('stat-total').textContent = lb.length;
+  document.getElementById('stat-time').textContent = updatedAt.slice(11, 16);
+  document.getElementById('stat-date').textContent = updatedAt.slice(0, 10);
+
+  if (lb[0]) {
+    document.getElementById('top1-name').textContent = lb[0].name;
+    document.getElementById('top1-equity').textContent = lb[0].equity.toLocaleString('vi-VN', {maximumFractionDigits: 0});
+    document.getElementById('stat-max').textContent = lb[0].equity.toLocaleString('vi-VN', {maximumFractionDigits: 0});
+  }
+
+  // Leaderboard rows
+  const body = document.getElementById('lb-body');
+  if (!lb.length) {
+    body.innerHTML = '<div class="loading-state"><div class="loading-text">Chưa có dữ liệu</div></div>';
+    return;
+  }
+
+  body.innerHTML = '';
+  lb.forEach((row, i) => {
+    const rankCls = i === 0 ? 'r1' : i === 1 ? 'r2' : i === 2 ? 'r3' : 'rn';
+    const rowCls = i === 0 ? 'top1' : i === 1 ? 'top2' : i === 2 ? 'top3' : '';
+    const rankNum = (i + 1) < 10 ? '0' + (i + 1) : '' + (i + 1);
+
+    // Coin detail
+    const coinStr = Object.entries(row.coins || {})
+      .filter(([, v]) => v > 0)
+      .map(([c, v]) => `${c}: ${v.toLocaleString('vi-VN', {maximumFractionDigits: 4})}`)
+      .join(' · ');
+
+    // Change indicator (placeholder — có thể so sánh với ngày hôm qua)
+    const changeBadge = `<div class="change-badge change-same">—</div>`;
+
+    const el = document.createElement('div');
+    el.className = `lb-row ${rowCls}`;
+    el.style.animationDelay = (i * 0.04) + 's';
+    el.innerHTML = `
+      <div class="rank-num ${rankCls}">${rankNum}</div>
+      <div>
+        <div class="trader-name">${escHtml(row.name)}</div>
+        <div class="trader-coins">${escHtml(coinStr) || 'Chưa có giao dịch'}</div>
+      </div>
+      <div>
+        <div class="equity-val">${row.equity.toLocaleString('vi-VN', {maximumFractionDigits: 2})}</div>
+        <div class="equity-unit">USDT</div>
+      </div>
+      ${changeBadge}`;
+    body.appendChild(el);
+  });
+}
+
+function escHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+// Countdown đến 0h
+function updateCountdown() {
+  const now = new Date();
+  const midnight = new Date(now);
+  midnight.setHours(24, 0, 0, 0);
+  const diff = midnight - now;
+  const h = String(Math.floor(diff / 3600000)).padStart(2, '0');
+  const m = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+  const s = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+  document.getElementById('countdown').textContent = `${h}:${m}:${s}`;
+}
+
+// Clock
+function updateClock() {
+  const n = new Date();
+  // Clock chạy trong header right nếu cần
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+// Load data lần đầu
+loadData();
+
+// Auto reload mỗi 5 phút (để bắt kịp nếu có update)
+setInterval(loadData, 5 * 60 * 1000);
+</script>
+</body>
+</html>
