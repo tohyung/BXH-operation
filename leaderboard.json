@@ -1,0 +1,30 @@
+{
+  "updated_at": "2026-04-09 18:17:27",
+  "updated_date": "2026-04-09",
+  "total_participants": 1,
+  "leaderboard": [
+    {
+      "accountId": "1488572108291178496",
+      "name": "anhtn.b23kt021",
+      "email": "anhtn.b23kt021@stu.ptit.edu.vn",
+      "equity": 10034.91,
+      "coins": {
+        "BTC": 0.0367,
+        "USDT": 7422.953655
+      },
+      "rank": 1
+    }
+  ],
+  "prices_used": {
+    "BTC": 71170.0,
+    "ETH": 2183.71,
+    "BNB": 602.0,
+    "SOL": 82.22,
+    "XRP": 1.3321,
+    "ADA": 0.2505,
+    "DOGE": 0.09163,
+    "AVAX": 9.06,
+    "MATIC": 0.3794,
+    "USDT": 1.0
+  }
+}
