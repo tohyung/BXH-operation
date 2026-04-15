@@ -1,29 +1,687 @@
 {
-  "updated_at": "2026-04-09 18:17:27",
-  "updated_date": "2026-04-09",
-  "total_participants": 1,
+  "updated_at": "2026-04-15 16:47:50",
+  "updated_date": "2026-04-15",
+  "total_participants": 66,
   "leaderboard": [
     {
       "accountId": "1488572108291178496",
       "name": "anhtn.b23kt021",
       "email": "anhtn.b23kt021@stu.ptit.edu.vn",
-      "equity": 10034.91,
+      "equity": 20136.32,
       "coins": {
         "BTC": 0.0367,
-        "USDT": 7422.953655
+        "USDT": 17422.953655
       },
       "rank": 1
+    },
+    {
+      "accountId": "1488574164074758144",
+      "name": "anvk.b23tc002",
+      "email": "anvk.b23tc002@stu.ptit.edu.vn",
+      "equity": 10061.92,
+      "coins": {
+        "USDT": 10061.914198,
+        "ETH": 0.0,
+        "BTC": 0.0
+      },
+      "rank": 2
+    },
+    {
+      "accountId": "1488574857531621376",
+      "name": "thudm.b23kt229",
+      "email": "thudm.b23kt229@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 3
+    },
+    {
+      "accountId": "1488574818029666304",
+      "name": "lanltn.b23kt101",
+      "email": "lanltn.b23kt101@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 4
+    },
+    {
+      "accountId": "1488574758395052032",
+      "name": "anhdt.b23tc003",
+      "email": "anhdt.b23tc003@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 5
+    },
+    {
+      "accountId": "1488574239446401024",
+      "name": "minhnq.b23tc067",
+      "email": "minhnq.b23tc067@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 6
+    },
+    {
+      "accountId": "1491078118826311680",
+      "name": "thaolp.b23kt218",
+      "email": "thaolp.b23kt218@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 7
+    },
+    {
+      "accountId": "1488574745841500160",
+      "name": "hieptv.b23kt081",
+      "email": "hieptv.b23kt081@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 8
+    },
+    {
+      "accountId": "1488575386529824768",
+      "name": "huynv.b23tc049",
+      "email": "huynv.b23tc049@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 9
+    },
+    {
+      "accountId": "1488572579206660096",
+      "name": "anhnpc.b23tc006",
+      "email": "anhnpc.b23tc006@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 10
+    },
+    {
+      "accountId": "1488574681517654016",
+      "name": "nguyennt.b23tc079",
+      "email": "nguyennt.b23tc079@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 11
+    },
+    {
+      "accountId": "1488575024586555392",
+      "name": "ngocnth.b23kt161",
+      "email": "ngocnth.b23kt161@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 12
+    },
+    {
+      "accountId": "1491083401313124352",
+      "name": "nquynhntn.b23kt201",
+      "email": "nquynhntn.b23kt201@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 13
+    },
+    {
+      "accountId": "1488574712006049792",
+      "name": "quynhntn.b23kt201",
+      "email": "quynhntn.b23kt201@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 14
+    },
+    {
+      "accountId": "1488574083040804864",
+      "name": "trungnh.",
+      "email": "trungnh.b24tc111@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 15
+    },
+    {
+      "accountId": "1492327376997056512",
+      "name": "phuongnpm.",
+      "email": "phuongnpm.b24tc083@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 16
+    },
+    {
+      "accountId": "1488574920781725696",
+      "name": "tunc.b23tc114",
+      "email": "tunc.b23tc114@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 17
+    },
+    {
+      "accountId": "1488553062376144896",
+      "name": "hungtv.b23tc045",
+      "email": "hungtv.b23tc045@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 18
+    },
+    {
+      "accountId": "1488574818017083392",
+      "name": "linhph.b23kt117",
+      "email": "linhph.b23kt117@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 19
+    },
+    {
+      "accountId": "1493726394985742336",
+      "name": "taotv.b23tc093",
+      "email": "taotv.b23tc093@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 20
+    },
+    {
+      "accountId": "1489013440038043648",
+      "name": "minhlnq.b23tc064",
+      "email": "minhlnq.b23tc064@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 21
+    },
+    {
+      "accountId": "1488575350177792000",
+      "name": "ngannh.b23tc074",
+      "email": "ngannh.b23tc074@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 22
+    },
+    {
+      "accountId": "1488574901634727936",
+      "name": "tienntt.b23dctc100",
+      "email": "tienntt.b23dctc100@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 23
+    },
+    {
+      "accountId": "1488574630259064832",
+      "name": "ngocda.b23tc076",
+      "email": "ngocda.b23tc076@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 24
+    },
+    {
+      "accountId": "1493029276499312640",
+      "name": "haitt.b23tc036",
+      "email": "haitt.b23tc036@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 25
+    },
+    {
+      "accountId": "1491081936251125760",
+      "name": "linhtk.b23kt121",
+      "email": "linhtk.b23kt121@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 26
+    },
+    {
+      "accountId": "1488572720097525760",
+      "name": "dungtt.b25tc031",
+      "email": "dungtt.b25tc031@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 27
+    },
+    {
+      "accountId": "1491000823247798272",
+      "name": "lynh.b23kt130",
+      "email": "lynh.b23kt130@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 28
+    },
+    {
+      "accountId": "1488572228327964672",
+      "name": "linhvtt.b23tc057",
+      "email": "linhvtt.b23tc057@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 29
+    },
+    {
+      "accountId": "1488575305030303744",
+      "name": "hienptm.b23tc038",
+      "email": "hienptm.b23tc038@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 30
+    },
+    {
+      "accountId": "1488575402807918592",
+      "name": "hoangnn.b23tc043",
+      "email": "hoangnn.b23tc043@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 31
+    },
+    {
+      "accountId": "1493030071286366208",
+      "name": "ninhntd.b23tc082",
+      "email": "ninhntd.b23tc082@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 32
+    },
+    {
+      "accountId": "1493678439671005184",
+      "name": "tungdt.b23tc120",
+      "email": "tungdt.b23tc120@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 33
+    },
+    {
+      "accountId": "1491113920427982848",
+      "name": "thaontp.b23kt222",
+      "email": "thaontp.b23kt222@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 34
+    },
+    {
+      "accountId": "1488574892847661056",
+      "name": "anhvm.b23tc012",
+      "email": "anhvm.b23tc012@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 35
+    },
+    {
+      "accountId": "1488575071235604480",
+      "name": "thuongnt.b23tc098",
+      "email": "thuongnt.b23tc098@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 36
+    },
+    {
+      "accountId": "1493767954846711808",
+      "name": "phucptn.b23tc085",
+      "email": "phucptn.b23tc085@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 37
+    },
+    {
+      "accountId": "1488574498352398336",
+      "name": "diepnb.b23kt041",
+      "email": "diepnb.b23kt041@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 38
+    },
+    {
+      "accountId": "1488573296868851712",
+      "name": "trangtt.b23tc110",
+      "email": "trangtt.b23tc110@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 39
+    },
+    {
+      "accountId": "1488573063254507520",
+      "name": "thuongth.b23tc099",
+      "email": "thuongth.b23tc099@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 40
+    },
+    {
+      "accountId": "1488572513309949952",
+      "name": "hant.b23tc030",
+      "email": "hant.b23tc030@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 41
+    },
+    {
+      "accountId": "1488572500873838592",
+      "name": "annd.b25ce003",
+      "email": "annd.b25ce003@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 42
+    },
+    {
+      "accountId": "1488572162267676672",
+      "name": "thuydp.",
+      "email": "thuydp.b24tc101@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 43
+    },
+    {
+      "accountId": "1488574836044201984",
+      "name": "champth.b23tc018",
+      "email": "champth.b23tc018@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 44
+    },
+    {
+      "accountId": "1488574743886954496",
+      "name": "ngandh.b23tc073",
+      "email": "ngandh.b23tc073@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 45
+    },
+    {
+      "accountId": "1488574636684738560",
+      "name": "manhpv.b23tc062",
+      "email": "manhpv.b23tc062@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 46
+    },
+    {
+      "accountId": "1488575748368236544",
+      "name": "maintx.b23tc060",
+      "email": "maintx.b23tc060@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 47
+    },
+    {
+      "accountId": "1490846463494717440",
+      "name": "trangtt.b23tc109",
+      "email": "trangtt.b23tc109@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 48
+    },
+    {
+      "accountId": "1488620969399418880",
+      "name": "trangbth.b23kt245",
+      "email": "trangbth.b23kt245@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 49
+    },
+    {
+      "accountId": "1488575293290446848",
+      "name": "lectn.b23tc054",
+      "email": "lectn.b23tc054@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 50
+    },
+    {
+      "accountId": "1488574417389748224",
+      "name": "dungnt.",
+      "email": "dungnt.b24tc024@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 51
+    },
+    {
+      "accountId": "1491053206707372032",
+      "name": "tuannd.b25tc134",
+      "email": "tuannd.b25tc134@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 52
+    },
+    {
+      "accountId": "1488574715638317056",
+      "name": "anhltl.b23tc004",
+      "email": "anhltl.b23tc004@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 53
+    },
+    {
+      "accountId": "1488573020875259904",
+      "name": "b23tc013",
+      "email": "b23tc013@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 54
+    },
+    {
+      "accountId": "1488572697720913920",
+      "name": "mybh.b23tc071",
+      "email": "mybh.b23tc071@stu.ptit.edu.vn",
+      "equity": 10000.0,
+      "coins": {
+        "USDT": 10000.0
+      },
+      "rank": 55
+    },
+    {
+      "accountId": "1492897115158872064",
+      "name": "duyenlt.",
+      "email": "duyenlt.b24tc026@stu.ptit.edu.vn",
+      "equity": 9998.97,
+      "coins": {
+        "USDT": 9801.027407,
+        "BTC": 0.002677
+      },
+      "rank": 56
+    },
+    {
+      "accountId": "1488574836379746304",
+      "name": "tuanpa.b23tc119",
+      "email": "tuanpa.b23tc119@stu.ptit.edu.vn",
+      "equity": 9997.19,
+      "coins": {
+        "USDT": 9599.999286,
+        "ETH": 0.171264
+      },
+      "rank": 57
+    },
+    {
+      "accountId": "1493991739914977280",
+      "name": "kietpg.",
+      "email": "kietpg.b24tc054@stu.ptit.edu.vn",
+      "equity": 9977.69,
+      "coins": {
+        "USDT": 9977.69
+      },
+      "rank": 58
+    },
+    {
+      "accountId": "1491443224324079616",
+      "name": "anhnt.b23tc008",
+      "email": "anhnt.b23tc008@stu.ptit.edu.vn",
+      "equity": 8273.5,
+      "coins": {
+        "BTC": 0.0,
+        "XRP": 0.0583,
+        "USDT": 8273.394603
+      },
+      "rank": 59
+    },
+    {
+      "accountId": "1488574403531767808",
+      "name": "thanhtt.b23tc096",
+      "email": "thanhtt.b23tc096@stu.ptit.edu.vn",
+      "equity": 6898.74,
+      "coins": {
+        "BTC": 0.0,
+        "USDT": 6898.712094
+      },
+      "rank": 60
+    },
+    {
+      "accountId": "1492266603423727616",
+      "name": "cuongtd.b23tc019",
+      "email": "cuongtd.b23tc019@stu.ptit.edu.vn",
+      "equity": 6579.49,
+      "coins": {
+        "USDT": 6579.490434
+      },
+      "rank": 61
+    },
+    {
+      "accountId": "1492301477400543232",
+      "name": "tuannv.b23tc118",
+      "email": "tuannv.b23tc118@stu.ptit.edu.vn",
+      "equity": 6335.0,
+      "coins": {
+        "BTC": 0.001782,
+        "USDT": 6203.230723
+      },
+      "rank": 62
+    },
+    {
+      "accountId": "1488572148657160192",
+      "name": "duynn.b23tc028",
+      "email": "duynn.b23tc028@stu.ptit.edu.vn",
+      "equity": 5401.58,
+      "coins": {
+        "USDT": 5401.579172
+      },
+      "rank": 63
+    },
+    {
+      "accountId": "1492227466897391616",
+      "name": "b24dctc086",
+      "email": "b24dctc086@stu.ptit.edu.vn",
+      "equity": 4390.7,
+      "coins": {
+        "BTC": 1e-06,
+        "ETH": 1e-06,
+        "USDT": 4390.651571
+      },
+      "rank": 64
+    },
+    {
+      "accountId": "1492273602282651648",
+      "name": "quyenntl.b23tc088",
+      "email": "quyenntl.b23tc088@stu.ptit.edu.vn",
+      "equity": 23.17,
+      "coins": {
+        "ETH": 0.00999
+      },
+      "rank": 65
+    },
+    {
+      "accountId": "1492345881125453824",
+      "name": "tund.b23tc115",
+      "email": "tund.b23tc115@stu.ptit.edu.vn",
+      "equity": 0.0,
+      "coins": {},
+      "rank": 66
     }
   ],
   "prices_used": {
-    "BTC": 71170.0,
-    "ETH": 2183.71,
-    "BNB": 602.0,
-    "SOL": 82.22,
-    "XRP": 1.3321,
-    "ADA": 0.2505,
-    "DOGE": 0.09163,
-    "AVAX": 9.06,
+    "BTC": 73933.2,
+    "ETH": 2319.19,
+    "BNB": 615.22,
+    "SOL": 83.07,
+    "XRP": 1.3521,
+    "ADA": 0.2398,
+    "DOGE": 0.0929,
+    "AVAX": 9.31,
     "MATIC": 0.3794,
     "USDT": 1.0
   }
